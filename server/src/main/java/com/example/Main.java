@@ -19,8 +19,8 @@ public class Main {
 
         String testo = in.readLine();
 
-        out.println(testo);
-    
-    
+        out.println(testo.toUpperCase());
+        
+        
     }
 }

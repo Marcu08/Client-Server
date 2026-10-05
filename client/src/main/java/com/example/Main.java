@@ -14,10 +14,15 @@ public class Main {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+        do{
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Inserisci una stringa:");
+            String testo = scanner.nextLine();
+            out.println(testo);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Inserisci una stringa:");
-        String testo = scanner.nextLine();
+            String risposta = in.readLine();
 
+            System.out.println(risposta);
+        }while ()
     }
 }
