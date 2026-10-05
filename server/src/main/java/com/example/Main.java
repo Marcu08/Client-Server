@@ -16,11 +16,14 @@ public class Main {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
-
-        String testo = in.readLine();
-
-        out.println(testo.toUpperCase());
-        
+        do{
+            String testo = in.readLine();   
+            if (testo.equals("!")){
+                break;
+            }
+            
+            out.println(testo.toUpperCase());   
+        }while(true);    
         
     }
 }

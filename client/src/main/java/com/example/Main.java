@@ -14,15 +14,23 @@ public class Main {
 
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+        boolean exit = false;
         do{
+            
             Scanner scanner = new Scanner(System.in);
             System.out.println("Inserisci una stringa:");
             String testo = scanner.nextLine();
-            out.println(testo);
+            if(testo.equals("exit")){
+                exit = true;
+                out.println("!");
+            }
+            else{
+                out.println(testo);
 
-            String risposta = in.readLine();
+                String risposta = in.readLine();
 
-            System.out.println(risposta);
-        }while ()
+                System.out.println(risposta);
+            }
+        }while (!exit);
     }
 }
